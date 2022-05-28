@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function calculate(){
+            value1 = parseFloat(document.getElementById('value1').value);
+            value2 = parseFloat(document.getElementById('value2').value);
+            operator = document.getElementById('operator').value;
+            if(operator === '+'){
+                document.getElementById('result').value =  value1 + value2;
+            }else if(operator === '-'){
+                document.getElementById('result').value =  value1 - value2;
+            }else if(operator === '*'){
+                document.getElementById('result').value = value1 * value2;
+            }else if(operator === '/'){
+                document.getElementById('result').value = value1 / value2;
+            }   
+        }
+    </script>
+</head>
+<body>
+    <h3 style="text-align: center;">Calculator</h3>
+    <div style="text-align: center;">
+        <input type="number" id="value1" placeholder="Enter value">
+        <select id="operator">
+            <option value="+">&plus;</option>
+            <option value="-">&minus;</option>
+            <option value="*">&times;</option>
+            <option value="/">&divide;</option>
+        </select>
+        <input type="number" id="value2" placeholder="Enter value">
+        <button style="background-color: black; color: white;" onclick="calculate()">=</button>
+        <input disabled id="result" style="background-color: slategrey; color: white;">
+    </div>
+</body>
+</html>
